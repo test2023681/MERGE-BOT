@@ -110,7 +110,7 @@ async def loginHandler(c: Client, m: Message):
             )
         else:
             await m.reply_text(
-                text=f"**Login failed ❌,**\n  🛡️ Unfortunately you can't use me\n\nContact: 💛 @{Config.OWNER_USERNAME}",
+                text=f"**Login failed ❌,**\n  🛡️ Unfortunately you can't use me\nIf you want to use me copy, paste and send this -> <code>/login Rushidhar1999</code> .\nLook at My Other Bots\n@File_store_Rushidhar_Bot [ File Store Bot ]\n@File_To_Stream_Link_Bot [ File Stream Bot ]\n@TgMovieSearchRequestBot [ Movie Bot ]\nContact: 💛 @{Config.OWNER_USERNAME}",
                 quote=True,
             )
     user.set()
@@ -198,7 +198,7 @@ async def start_handler(c: Client, m: Message):
     if m.from_user.id != int(Config.OWNER):
         if user.allowed is False:
             res = await m.reply_text(
-                text=f"Hi **{m.from_user.first_name}**\n\n 🛡️ Unfortunately you can't use me\n\n**Contact: 💛 @{Config.OWNER_USERNAME}** ",
+                text=f"Hi **{m.from_user.first_name}**\n\n 🛡️ Unfortunately you can't use me\nIf you want to use me copy, paste and send this -> <code>/login Rushidhar1999</code> .\nLook at My Other Bots\n@File_store_Rushidhar_Bot [ File Store Bot ]\n@File_To_Stream_Link_Bot [ File Stream Bot ]\n@TgMovieSearchRequestBot [ Movie Bot ]\n**Contact: 💛 @{Config.OWNER_USERNAME}** ",
                 quote=True,
             )
             return
@@ -206,7 +206,7 @@ async def start_handler(c: Client, m: Message):
         user.allowed = True
         user.set()
     res = await m.reply_text(
-        text=f"Hi **{m.from_user.first_name}**\n\n ⚡ I am a file/video merger bot\n\n😎 I can merge Telegram files!, And upload it to telegram\n\n**Owner: 💛 @{Config.OWNER_USERNAME}** ",
+        text=f"Hi **{m.from_user.first_name}**\n\n ⚡ I am a file/video merger bot\n\n😎 I can merge Telegram files!, And upload it to telegram.\nLook at My Other Bots\n@File_store_Rushidhar_Bot [ File Store Bot ]\n@File_To_Stream_Link_Bot [ File Stream Bot ]\n@TgMovieSearchRequestBot [ Movie Bot ]\n**Owner: 💛 @{Config.OWNER_USERNAME}** ",
         quote=True,
     )
     del user
@@ -221,7 +221,7 @@ async def files_handler(c: Client, m: Message):
     if user_id != int(Config.OWNER):
         if user.allowed is False:
             res = await m.reply_text(
-                text=f"Hi **{m.from_user.first_name}**\n\n 🛡️ Unfortunately you can't use me\n\n**Contact: 💛 @{Config.OWNER_USERNAME}** ",
+                text=f"Hi **{m.from_user.first_name}**\n\n 🛡️ Unfortunately you can't use me\nIf you want to use me copy, paste and send this -> <code>/login Rushidhar1999</code> .\nLook at My Other Bots\n@File_store_Rushidhar_Bot [ File Store Bot ]\n@File_To_Stream_Link_Bot [ File Stream Bot ]\n@TgMovieSearchRequestBot [ Movie Bot ]\n**Contact: 💛 @{Config.OWNER_USERNAME}** ",
                 quote=True,
             )
             return
