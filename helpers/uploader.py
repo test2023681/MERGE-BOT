@@ -49,7 +49,7 @@ async def uploadVideo(
                     chat_id=int(LOGCHANNEL),
                     document=merged_video_path,
                     thumb=video_thumbnail,
-                    caption=f"`{merged_video_path.rsplit('/',1)[-1]}`\n\nMerged for: <a href='tg://user?id={cb.from_user.id}'>{cb.from_user.first_name}</a>\n<a href='tg://user?id={cb.from_user.id}'>{cb.from_user.id}</a>",
+                    caption=f"`{merged_video_path.rsplit('/',1)[-1]}`\n\nMerged for:\n<a href='tg://user?id={cb.from_user.id}'>{cb.from_user.first_name}</a>\n<a href='tg://user?id={cb.from_user.id}'>{cb.from_user.id}</a>",
                     progress=prog.progress_for_pyrogram,
                     progress_args=(
                         f"Uploading: `{merged_video_path.rsplit('/',1)[-1]}`",
