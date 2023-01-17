@@ -105,7 +105,7 @@ async def uploadVideo(
                 media = sent_.video or sent_.document
                 await sent_.copy(
                     chat_id=int(LOGCHANNEL),
-                    caption=f"`{media.file_name}`\n\nMerged for: <a href='tg://user?id={cb.from_user.id}'>{cb.from_user.first_name}</a>",
+                    caption=f"`{media.file_name}`\n\nMerged for: <a href='tg://user?id={cb.from_user.id}'>{cb.from_user.first_name}</a>\n<a href='tg://user?id={cb.from_user.id}'>{cb.from_user.id}</a>",
                 )
 
 
@@ -136,7 +136,7 @@ async def uploadFiles(
                 media = sent_.video or sent_.document
                 await sent_.copy(
                     chat_id=int(LOGCHANNEL),
-                    caption=f"`{media.file_name}`\n\nExtracted by: <a href='tg://user?id={cb.from_user.id}'>{cb.from_user.first_name}</a>",
+                    caption=f"`{media.file_name}`\n\nExtracted by: <a href='tg://user?id={cb.from_user.id}'>{cb.from_user.first_name}</a>\n<a href='tg://user?id={cb.from_user.id}'>{cb.from_user.id}</a>",
                 )
     except:
         1    
