@@ -101,7 +101,7 @@ async def mergeSub(c: Client, cb: CallbackQuery, new_file_name: str):
         await cb.message.edit("✅ Sucessfully Muxed Video !")
     except MessageNotModified:
         await cb.message.edit("Sucessfully Muxed Video ! ✅")
-    LOGGER.info(f"Video muxed for: {cb.from_user.first_name} ")
+    LOGGER.info(f"Video muxed for:\n{cb.from_user.first_name}\n{cb.from_user.id}")
     await asyncio.sleep(3)
     file_size = os.path.getsize(subbed_video)
     os.rename(subbed_video, new_file_name)
